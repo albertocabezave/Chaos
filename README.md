@@ -1,3 +1,3 @@
 # Objetivos:
 
-    - Permitir el uso de un sistema de tiempo determinista
+    - Investigacion de bases computacionales
