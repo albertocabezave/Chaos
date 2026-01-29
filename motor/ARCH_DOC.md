@@ -41,3 +41,15 @@
 
 ​5. Troubleshooting Guide
 ​Common issues and where to find them:
+Problem Files to Check
+Program won't compile Check compiler messages for file/line. Usually: main.cpp or motor/code/core/*.cpp.
+Engine won't start / No output motor/main.cpp and engine.cpp (Check loop initialization and print statements).
+Incorrect time delta (jumps/negative) time.cpp (Check update, resume). Relevant line: previousTime = Clock::now().
+Pause/Resume not working time.cpp (Check Time::pause() and Time::resume()).
+Simulation logic not advancing engine.cpp (Check accumulator and FIXED_STEP) and app.cpp (Check how it uses delta).
+Excessive CPU usage The main loop may be "spinning." Adding a 1ms sleep in the main loop when accumulator < FIXED_STEP can reduce CPU load.
+Change FIXED_STEP or maxDelta FIXED_STEP is controlled in engine.cpp (TARGET_FPS). maxDelta is in time.cpp.
+
+6. Simple First Fixes (Safe Changes)
+​(Placeholder for your specific safe modifications)
+​Would you like me to translate the "Simple First Fixes" section as well, or perhaps generate a Dockerfile/Makefile for this project structure?
