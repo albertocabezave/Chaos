@@ -1,3 +1,3 @@
 # Objetivos:
 
-    - Investigacion de bases computacionales
+    - Investigacion de bases computacionales que validen la arquitectura propuesta.
