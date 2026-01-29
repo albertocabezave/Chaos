@@ -1,4 +1,4 @@
-El programa principal (Motor) controla el bule de simulacion.
+El programa principal (Motor) controla el bucle de simulacion.
 Un modulo de Tiempo mide intervalos reales entre interacciones 
 y entrega un delta de simulacion (en segundos). El Motor acumula
 ese delta y ejecuta la logica de la Aplicacion en pasos fijos (fixed step)
@@ -6,7 +6,7 @@ para conseguir resultados estables y reproducibles.
 
 2. Componentes del sistema y correspondencia con archivos.
 
-  - Punton de entrada:
+  - Punto de entrada:
     - motor/main.cpp - Crea Motor y arranca ejecutar()
 
   - Nucleo del motor (sheduler y bucle principal):
@@ -18,7 +18,7 @@ para conseguir resultados estables y reproducibles.
     - motor/codigo/nucleo/tiempo.h (interfaz)
     - motor/codigo/nucleo/tiempo.cpp (implementacion)
 
-  - Aplicacio n (simulacion basica)
+  - Aplicacion (simulacion basica)
     - motor/codigo/nucleo/app.h
     - motor/codigo/nucleo/app.cpp
 
