@@ -19,7 +19,7 @@ class Tiempo {
         double obtenerEscala() const;
 
     private:
-        using Reloj = std::steady_clock;
+        using Reloj = std::chrono::steady_clock;
         
         Reloj::time_point tiempoAnterior;
         

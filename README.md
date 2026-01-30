@@ -1,6 +1,6 @@
 # Objetivos:
 
-    - Investigacion de bases computacionales que validen la arquitectura propuesta.
+    - Investigacion de bases computacionales y logica de sistemas que validen la arquitectura propuesta.
 
 # Objectives:
 ​Research of Computational Foundations: 

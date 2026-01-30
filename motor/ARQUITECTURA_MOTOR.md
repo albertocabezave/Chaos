@@ -1,4 +1,33 @@
-El programa principal (Motor) controla el bucle de simulacion.
+# Motor
+
+Es importante señalar que uno de los objetivos del proyecto es la portabilidad total a
+cualquier plataforma, poder ejecutarse en una laptop con Debian 13, Windows, Android o iOS,
+sin tener que reescribir todo el codigo.
+
+Por esta razon la ley es apegarse a ciertos criterios como el ESTANDAR de C++ (std::chrono, std::string), steady_clock es lo mismo en windows que en linux.
+
+Por consiguiente se debe tener muy en cuenta el:
+
+1. Uso de capas de abstraccion (HAL).
+  Usar librerias que traduzcan las funciones del sistema (ej. abrir una ventana) para que funcione igual en windows que en linux.
+
+2. Empaquetado.
+  Incluir todas las librerias dentro de la carpeta del ejecutable.
+
+3. Rutas relativas.
+  El programa nunca debe buscar archivos en C:\users\nombre, sino en ./Chaos/.
+
+Ademas de por supuesto ser usado en simulaciones industriales de gemelos digitales para la industria de los hidrocarburos
+
+A proposito la clave del exito segun mis investigaciones:
+
+(En construccion)
+
+-----------------------------------------------------------------------------------
+
+# Flujo de objetos
+
+1. El programa principal (Motor) controla el bucle de simulacion.
 Un modulo de Tiempo mide intervalos reales entre interacciones 
 y entrega un delta de simulacion (en segundos). El Motor acumula
 ese delta y ejecuta la logica de la Aplicacion en pasos fijos (fixed step)
@@ -74,5 +103,3 @@ para conseguir resultados estables y reproducibles.
     - Quieres cambiar el PASO_FIJO o deltaMaximo:
       - PASO_FIJO se controla en motor.cpp (const double FPS_OBJETIVO).
       - deltaMaximo esta en tiempo.cpp para imprimir mas o usar una libreria de logging.
-
-6. Primeros arreglos simples (cambios que puedes hacer con seguridad)
