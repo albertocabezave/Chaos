@@ -1,36 +1,17 @@
-#ifndef TIEMPO_H
-#define TIEMPO_H
+#ifndef MOTOR_H
+#define MOTOR_H
 
-#include <chrono>
+#include "tiempo.h"
+#include "app.h"
 
-class Tiempo {
+class Motor {
     public:
-        Tiempo();
-
-        void actualizar();
-
-        double obtenerDelta() const;
-
-        void pausar();
-        void reanudar();
-        bool estaPausado() const;
-
-        void establecerEscala(double escala);
-        double obtenerEscala() const;
+        Motor();
+        void ejecutar();
 
     private:
-        using Reloj = std::chrono::steady_clock;
-        
-        Reloj::time_point tiempoAnterior;
-        
-        double deltaSimulacion; // Es double para poder hacer el paso fijo de 60 FPS
-
-        bool pausado;
-
-        const double deltaMaximo = 0.1; // segundos
-
-        double escalaTiempo;
-
+        Tiempo tiempo;
+        Aplicacion aplicacion;
 };
 
 #endif
